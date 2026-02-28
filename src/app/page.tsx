@@ -71,7 +71,7 @@ export default function Home() {
       <Header isDark={isDark} onToggleTheme={toggleTheme} />
 
       {/* Hero (usually handles its own animation) */}
-      <Hero shouldReduceMotion={shouldReduceMotion} />
+      <Hero shouldReduceMotion={shouldReduceMotion ?? false} />
 
       {/* About */}
       <motion.section
@@ -110,7 +110,7 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true, margin: '-120px' }}
       >
-        <Timeline shouldReduceMotion={shouldReduceMotion} />
+        <Timeline shouldReduceMotion={shouldReduceMotion ?? false} />
       </motion.section>
 
       {/* Insights */}
