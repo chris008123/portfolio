@@ -1,0 +1,178 @@
+{
+  "projects": [
+    {
+      "id": "tech-portfolio-platform",
+      "title": "Tech Portfolio Platform",
+      "tagline": "Founder-level personal website with scalable architecture",
+      "description": "Designed and built a modern, animated portfolio website intended to reflect the presence of a tech company co-founder.",
+      "problem": "Most developer portfolios are static, hard-coded, and difficult to scale as projects grow.",
+      "solution": "Implemented a data-driven architecture where projects are defined via structured JSON, allowing easy expansion without UI refactoring.",
+      "architecture": [
+        "Component-based UI architecture",
+        "Data-driven project rendering via JSON",
+        "Smooth motion system for UI transitions",
+        "Dark/light theme support",
+        "Optimized image handling for performance"
+      ],
+      "impact": [
+        "Projects can be added without touching UI code",
+        "Clean separation of data and presentation",
+        "Professional visual identity suitable for founders",
+        "Scalable structure for long-term growth"
+      ],
+      "metrics": {
+        "pages": "Single-page app",
+        "themes": "Dark & Light",
+        "scalability": "Unlimited projects",
+        "performance": "Optimized assets"
+      },
+      "tech": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "year": "2026"
+    },
+    {
+      "id": "flutter-mobile-app",
+      "title": "Flutter Mobile Application",
+      "tagline": "Cross-platform mobile app built with Flutter",
+      "description": "Built a mobile application using Flutter, focusing on clean UI, responsive layouts, and cross-platform compatibility.",
+      "problem": "Building separate apps for Android and iOS increases development time and complexity.",
+      "solution": "Used Flutter to create a single codebase that runs consistently across platforms.",
+      "architecture": [
+        "Flutter widget-based UI system",
+        "State management for UI updates",
+        "Responsive layout handling",
+        "Reusable component design",
+        "Optimized performance for mobile devices"
+      ],
+      "impact": [
+        "Single codebase for multiple platforms",
+        "Consistent UI across devices",
+        "Fast development iteration",
+        "Production-ready mobile foundation"
+      ],
+      "metrics": {
+        "platforms": "Android & iOS",
+        "codebase": "Single",
+        "performance": "Smooth UI",
+        "maintainability": "High"
+      },
+      "tech": ["Flutter", "Dart"],
+      "year": "2025"
+    },
+    {
+      "id": "asl-gesture-recognition",
+      "title": "ASL Gesture Recognition System",
+      "tagline": "Real-time sign language interpretation using computer vision and ML",
+      "description": "Developed a real-time American Sign Language recognition system that converts hand gestures into readable text and speech. Designed for accessibility and real-world usability.",
+      "problem": "Communication barriers exist for deaf and hard-of-hearing individuals, and most available solutions are either inaccurate, expensive, or not real-time.",
+      "solution": "Built a computer vision pipeline using hand landmark detection and a trained ML model to classify gestures. Implemented temporal smoothing to reduce false predictions and integrated text-to-speech output.",
+      "architecture": [
+        "MediaPipe-based hand landmark extraction",
+        "Custom-trained ML model for gesture classification",
+        "Real-time video processing with OpenCV",
+        "Prediction smoothing and duplicate filtering",
+        "Text-to-speech output for accessibility"
+      ],
+      "impact": [
+        "Real-time gesture recognition with low latency",
+        "Improved prediction stability through temporal filtering",
+        "End-to-end pipeline from camera input to speech output",
+        "Foundation for full sign-language sentence construction"
+      ],
+      "metrics": {
+        "latency": "<100ms",
+        "accuracy": "High single-gesture accuracy",
+        "handsSupported": "One & two-hand gestures",
+        "mode": "Real-time"
+      },
+      "tech": ["Python", "MediaPipe", "OpenCV", "PyTorch", "Text-to-Speech"],
+      "year": "2025"
+    },
+    {
+      "id": "hand-controlled-mouse",
+      "title": "Hand-Controlled Mouse System",
+      "tagline": "Gesture-based cursor control using computer vision",
+      "description": "Built a hands-free mouse control system that allows users to move the cursor, click, and drag using hand gestures captured via webcam.",
+      "problem": "Traditional input devices are not accessible to all users, and existing gesture-control solutions lack precision and smoothness.",
+      "solution": "Mapped hand landmark coordinates to screen space with smoothing algorithms. Implemented gesture detection for click, drag, and scroll actions.",
+      "architecture": [
+        "MediaPipe hand tracking for landmark detection",
+        "Coordinate normalization and screen mapping",
+        "Gesture state machine for mouse actions",
+        "Motion smoothing to reduce jitter",
+        "OS-level mouse control integration"
+      ],
+      "impact": [
+        "Accurate cursor control using only hand movement",
+        "Reduced jitter through interpolation and damping",
+        "Supports click, drag, and drop interactions",
+        "Hands-free interaction suitable for accessibility use cases"
+      ],
+      "metrics": {
+        "frameRate": "30+ FPS",
+        "latency": "<50ms",
+        "gestures": "Click, Drag, Move",
+        "inputDevice": "Webcam"
+      },
+      "tech": ["Python", "MediaPipe", "OpenCV", "PyAutoGUI"],
+      "year": "2025"
+    },
+    {
+      "id": "python-automation",
+      "title": "Python Automation Systems",
+      "tagline": "Automating repetitive workflows with Python",
+      "description": "Built multiple automation scripts to handle repetitive tasks such as file processing, system control, and data handling.",
+      "problem": "Manual workflows were time-consuming, error-prone, and inefficient.",
+      "solution": "Designed modular Python automation tools with reusable components and configurable inputs.",
+      "architecture": [
+        "Modular Python script architecture",
+        "Task scheduling and automation logic",
+        "File system and OS-level integrations",
+        "Error handling and logging",
+        "Config-driven execution"
+      ],
+      "impact": [
+        "Significant reduction in manual task time",
+        "Improved consistency and reliability",
+        "Reusable automation modules",
+        "Foundation for larger automation pipelines"
+      ],
+      "metrics": {
+        "tasksAutomated": "Multiple workflows",
+        "timeSaved": "Hours per task",
+        "reusability": "High",
+        "stability": "Production-ready scripts"
+      },
+      "tech": ["Python", "OS", "Automation", "Scripting"],
+      "year": "2024"
+    },
+    {
+      "id": "ml-python-projects",
+      "title": "Machine Learning with Python",
+      "tagline": "Applied ML models for real-world problems",
+      "description": "Developed machine learning models for classification and prediction tasks, focusing on practical deployment rather than academic demos.",
+      "problem": "Raw data without intelligence provides limited value.",
+      "solution": "Applied supervised learning techniques with proper preprocessing, evaluation, and optimization.",
+      "architecture": [
+        "Data preprocessing and normalization",
+        "Model training and evaluation pipelines",
+        "Hyperparameter tuning",
+        "Inference-ready model design",
+        "Experiment tracking"
+      ],
+      "impact": [
+        "Accurate predictions on real datasets",
+        "Reusable ML pipelines",
+        "Hands-on ML engineering experience",
+        "Foundation for advanced AI systems"
+      ],
+      "metrics": {
+        "models": "Multiple",
+        "training": "Supervised learning",
+        "deploymentReady": "Yes",
+        "datasets": "Real-world"
+      },
+      "tech": ["Python", "Scikit-learn", "PyTorch", "NumPy", "Pandas"],
+      "year": "2024"
+    }
+  ]
+}
