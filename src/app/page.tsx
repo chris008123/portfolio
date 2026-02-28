@@ -63,10 +63,10 @@ export default function Home() {
     >
       {/* Particle Background */}
       <ParticleBackground
-        isDark={isDark}
-        shouldReduceMotion={shouldReduceMotion}
+        isDark={isDark ?? false}
+        shouldReduceMotion={shouldReduceMotion ?? false}
       />
-
+ 
       {/* Navigation */}
       <Header isDark={isDark} onToggleTheme={toggleTheme} />
 
