@@ -6,7 +6,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Manifesto from '@/components/Manifesto'
-import Projects from '@/components/Projects'
+import ProjectsTeaser from '@/components/ProjectsTeaser'
 import Timeline from '@/components/Timeline'
 import Insights from '@/components/Insights'
 import Contact from '@/components/Contact'
@@ -93,15 +93,8 @@ export default function Home() {
         <Manifesto />
       </motion.section>
 
-      {/* Projects */}
-      <motion.section
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-120px' }}
-      >
-        <Projects />
-      </motion.section>
+       {/* Projects */}
+      <ProjectsTeaser />
 
       {/* Timeline */}
       <motion.section
