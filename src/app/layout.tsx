@@ -1,5 +1,8 @@
+// Save this file as: src/app/layout.tsx
+
 import type { Metadata } from 'next'
 import './globals.css'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Chris Aidoo | Co-Founder ',
@@ -13,6 +16,23 @@ export const metadata: Metadata = {
   },
 }
 
+// Runs before React hydrates, so the correct theme class is on <html>
+// before first paint — no flash of the wrong theme on load or refresh.
+const themeInitScript = `
+(function () {
+  try {
+    var stored = localStorage.getItem('portfolio-theme');
+    if (stored === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  } catch (e) {
+    document.documentElement.classList.add('dark');
+  }
+})();
+`
+
 export default function RootLayout({
   children,
 }: {
@@ -20,8 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-screen bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text transition-colors duration-300">
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

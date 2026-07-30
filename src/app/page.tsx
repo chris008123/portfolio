@@ -1,6 +1,7 @@
+// Save this file as: src/app/page.tsx
+
 'use client'
 
-import { useState, useEffect } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -12,6 +13,7 @@ import Insights from '@/components/Insights'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ParticleBackground from '@/components/ParticleBackground'
+import { useTheme } from '@/components/ThemeProvider'
 
 /* ---------- Animation presets ---------- */
 const pageVariants = {
@@ -35,24 +37,9 @@ const sectionVariants = {
 }
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(true)
-  const [mounted, setMounted] = useState(false)
+  const { theme, toggleTheme } = useTheme()
   const shouldReduceMotion = useReducedMotion()
-
-  useEffect(() => {
-    setMounted(true)
-
-    // DEFAULT TO DARK
-    document.documentElement.classList.add('dark')
-    setIsDark(true)
-  }, [])
-
-  const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle('dark')
-  }
-
-  if (!mounted) return null
+  const isDark = theme === 'dark'
 
   return (
     <motion.main
@@ -63,10 +50,10 @@ export default function Home() {
     >
       {/* Particle Background */}
       <ParticleBackground
-        isDark={isDark ?? false}
+        isDark={isDark}
         shouldReduceMotion={shouldReduceMotion ?? false}
       />
- 
+
       {/* Navigation */}
       <Header isDark={isDark} onToggleTheme={toggleTheme} />
 
@@ -93,7 +80,7 @@ export default function Home() {
         <Manifesto />
       </motion.section>
 
-       {/* Projects */}
+      {/* Projects (teaser — full list lives at /projects) */}
       <ProjectsTeaser />
 
       {/* Timeline */}
